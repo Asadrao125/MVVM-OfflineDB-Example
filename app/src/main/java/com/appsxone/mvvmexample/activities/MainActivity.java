@@ -87,7 +87,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent, EDIT_NOTE_REQUEST);
             }
         });
-
     }
 
     @Override
@@ -122,7 +121,6 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Note Saved", Toast.LENGTH_SHORT).show();
         } else if (requestCode == EDIT_NOTE_REQUEST && resultCode == RESULT_OK) {
             int id = data.getIntExtra(AddEditNoteActivity.ID, -1);
-
             if (id != -1) {
                 String title = data.getStringExtra(AddEditNoteActivity.TITLE);
                 String description = data.getStringExtra(AddEditNoteActivity.DESCRIPTION);
@@ -137,7 +135,6 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 Toast.makeText(this, "Note cannot be updated", Toast.LENGTH_SHORT).show();
             }
-
         }
     }
 }
