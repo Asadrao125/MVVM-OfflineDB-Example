@@ -50,6 +50,7 @@ public class NoteAdapter extends ListAdapter<Note, NoteAdapter.NoteHolder> {
         holder.tvTitle.setText(note.getTitle());
         holder.tvDescription.setText(note.getDescription());
         holder.tvPriority.setText("" + note.getPriority());
+        holder.tvCircle.setText("" + note.getTitle().charAt(0));
     }
 
     public Note getNoteAt(int position) {
@@ -57,13 +58,14 @@ public class NoteAdapter extends ListAdapter<Note, NoteAdapter.NoteHolder> {
     }
 
     class NoteHolder extends RecyclerView.ViewHolder {
-        private TextView tvTitle, tvPriority, tvDescription;
+        private TextView tvTitle, tvPriority, tvDescription, tvCircle;
 
         public NoteHolder(View itemView) {
             super(itemView);
             tvTitle = itemView.findViewById(R.id.tvTitle);
             tvPriority = itemView.findViewById(R.id.tvPriority);
             tvDescription = itemView.findViewById(R.id.tvDescription);
+            tvCircle = itemView.findViewById(R.id.tvCircle);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
