@@ -48,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_close);
+
         recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
