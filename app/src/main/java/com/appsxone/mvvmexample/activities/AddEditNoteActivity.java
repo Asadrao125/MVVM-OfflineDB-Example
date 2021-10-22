@@ -25,7 +25,7 @@ public class AddEditNoteActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_note);
+        setContentView(R.layout.activity_add_edit_note);
 
         edtTitle = findViewById(R.id.edtTitle);
         edtDescription = findViewById(R.id.edtDesc);
