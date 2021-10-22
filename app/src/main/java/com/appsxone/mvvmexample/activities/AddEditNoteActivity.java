@@ -68,8 +68,13 @@ public class AddEditNoteActivity extends AppCompatActivity {
         String title = edtTitle.getText().toString().trim();
         String description = edtDescription.getText().toString().trim();
         int number = numberPicker.getValue();
-        if (title.isEmpty() || description.isEmpty()) {
-            Toast.makeText(this, "Please enter input fields", Toast.LENGTH_SHORT).show();
+        if (title.isEmpty()) {
+            edtTitle.setError("Required");
+            edtTitle.requestFocus();
+            return;
+        } else if (description.isEmpty()) {
+            edtDescription.setError("Required");
+            edtDescription.requestFocus();
             return;
         }
 
